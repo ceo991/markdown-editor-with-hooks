@@ -4,35 +4,79 @@ body{
 
 .editor{
  background-color:#fce3b6;
- height: 100vh;
+ height: 100vh; 
  overflow-y:scroll;
 }
 
 .preview{
  background-color: #c9c8c5; 
- height: 100vh;
+ height: 100vh ;
  overflow-y:scroll;
 }
 
 .gutter {
-    background-color: #eee;
-    background-repeat: no-repeat;
-    background-position: 50%;
+    background-color: #eee !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% !important;
+    width:15px !important;
+    height: 100vh !important;
 }
 
-.gutter.gutter-horizontal {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+.gutter.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==') !important;
 }
+.gutter.gutter.gutter.gutter-vertical {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==') !important;
+}
+
+
 
 .gutter.gutter-horizontal:hover {
-    cursor: col-resize;
+    cursor: col-resize !important;
 }
 
 .split {
-    display: flex;
-    flex-direction:row; 
+    display: flex ;
+    flex-direction:row ;
+}
+
+.split-mobile {
+    height: 100vh !important;
+    width: 100vw !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
 }
 
 textarea {
   max-width:95%;
+}
+
+@media (max-width: 700px) {
+    .editor{
+        background-color:#fce3b6;
+        width:100% !important;
+        overflow-y:scroll !important;
+    }
+       
+    .preview{
+        background-color: #c9c8c5; 
+        width:100% !important;
+        overflow-y:scroll !important;
+    }
+    
+    .gutter {
+        background-color: #eee !important;
+        background-repeat: no-repeat !important;
+        background-position: 50% !important;
+        width: 100vw !important;
+        height: 15px !important;
+    }
+    
+    .gutter.gutter-horizontal {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==') !important;
+    }
+    .gutter.gutter-vertical {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==') !important;
+    }
 }
