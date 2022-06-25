@@ -44,6 +44,7 @@ function App() {
               <Preview content={content} changeDisplayMode={changeDisplayMode} width={width} displayMode={displayMode}/>
           </Split> : displayMode === "editor" ? <Editor content={content} changeState={handleOnChange} changeDisplayMode={changeDisplayMode} width={width} displayMode={displayMode}/> : displayMode === "preview" ?  <Preview content={content} changeDisplayMode={changeDisplayMode} width={width} displayMode={displayMode}/> : <div><h1>Something is wrong!</h1></div>
         }
+        <h4 style={{textAlign: 'center'}}><a href='https://github.com/ceo991/markdown-editor-with-hooks' style={{color:"black",textDecoration: "none"}}>You can see the source code here</a></h4>
       </div>
   );
 }
