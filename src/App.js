@@ -40,9 +40,9 @@ function App() {
             direction={direction} 
             className={split}
           >
-              <Editor content={content} changeState={handleOnChange} changeDisplayMode={changeDisplayMode} width={width}/>
-              <Preview content={content} changeDisplayMode={changeDisplayMode} width={width}/>
-          </Split> : displayMode === "editor" ? <Editor content={content} changeState={handleOnChange} changeDisplayMode={changeDisplayMode} width={width}/> : displayMode === "preview" ?  <Preview content={content} changeDisplayMode={changeDisplayMode} width={width}/> : <div><h1>Something is wrong!</h1></div>
+              <Editor content={content} changeState={handleOnChange} changeDisplayMode={changeDisplayMode} width={width} displayMode={displayMode}/>
+              <Preview content={content} changeDisplayMode={changeDisplayMode} width={width} displayMode={displayMode}/>
+          </Split> : displayMode === "editor" ? <Editor content={content} changeState={handleOnChange} changeDisplayMode={changeDisplayMode} width={width} displayMode={displayMode}/> : displayMode === "preview" ?  <Preview content={content} changeDisplayMode={changeDisplayMode} width={width} displayMode={displayMode}/> : <div><h1>Something is wrong!</h1></div>
         }
       </div>
   );
